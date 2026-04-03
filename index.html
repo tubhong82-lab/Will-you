@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Will You Be My Girlfriend?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="container" class="card">
+
+    <!-- Main Question View -->
+    <div id="main-view">
+      <div class="heart" id="heart-emoji">💝</div>
+      <p class="title">A special question for you...</p>
+      <p class="sub">There's something I've been wanting to ask.<br>Will you be my girlfriend? 🌸</p>
+      <div class="buttons">
+        <button class="btn-yes" onclick="handleYes()">Yes! 💕</button>
+        <button class="btn-no" id="no-btn" onclick="handleNo()">No</button>
+      </div>
+      <p id="no-msg"></p>
+    </div>
+
+    <!-- Yes Response View -->
+    <div id="yes-view" style="display:none;">
+      <div class="big-emoji">🥰</div>
+      <p class="title">Yay!! You said yes!</p>
+      <p class="sub">This made me so happy! 💕<br>You're my favorite person.</p>
+      <div id="confetti-box"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
