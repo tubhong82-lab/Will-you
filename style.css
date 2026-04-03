@@ -1,0 +1,150 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family:'DM Sans', sans-serif;
+  background: linear-gradient(135deg,#fde8f0,#e8f0fe);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+/* pages */
+.page {
+  display:none;
+  width:100%;
+  justify-content:center;
+}
+
+.page.active {
+  display:flex;
+}
+
+/* CARD */
+.login-card, .card {
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(15px);
+  border-radius: 28px;
+  padding: 2.5rem 2rem;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(232, 96, 138, 0.2);
+}
+
+/* LOGIN */
+.login-title {
+  font-family:'Playfair Display', serif;
+  font-size:2.3rem;
+  color:#c94070;
+  margin-bottom:0.3rem;
+  text-shadow:0 4px 20px rgba(232,96,138,0.3);
+}
+
+.login-sub {
+  font-size:14px;
+  color:#9a6070;
+  margin-bottom:1.8rem;
+}
+
+.form-group {
+  text-align:left;
+  margin-bottom:1rem;
+}
+
+.form-group label {
+  font-size:12px;
+  color:#9a6070;
+}
+
+.form-group input {
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:1.5px solid #eee;
+  font-size:15px;
+  margin-top:5px;
+}
+
+.login-btn {
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  border:none;
+  font-size:16px;
+  background: linear-gradient(135deg,#ff6a95,#d6336c);
+  color:white;
+  cursor:pointer;
+  box-shadow:0 8px 25px rgba(255,105,135,0.4);
+}
+
+.login-btn:hover {
+  transform:translateY(-2px);
+}
+
+/* PROPOSAL */
+.title {
+  font-family:'Playfair Display', serif;
+  color:#c94070;
+  margin-bottom:20px;
+}
+
+.buttons {
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:20px 0;
+}
+
+.yes, .no {
+  padding:12px 22px;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+}
+
+.yes {
+  background:linear-gradient(135deg,#ff6a95,#d6336c);
+  color:white;
+}
+
+.no {
+  background:#eee;
+}
+
+.message {
+  margin-top:10px;
+  color:#c94070;
+}
+
+.back {
+  margin-top:20px;
+  background:none;
+  border:none;
+  color:#888;
+  cursor:pointer;
+}
+
+/* FLOATING */
+.petals {
+  position:fixed;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+
+.petal {
+  position:absolute;
+  animation: float 10s linear infinite;
+  opacity:0.25;
+}
+
+@keyframes float {
+  0% { transform:translateY(-50px); }
+  100% { transform:translateY(100vh); }
+}
